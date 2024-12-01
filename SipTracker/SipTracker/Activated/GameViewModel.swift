@@ -34,10 +34,6 @@ final class GameViewModel: ObservableObject {
         return correction[currentRound] ?? false
     }
     
-    func timerIsEnd() {
-        self.currentRound += 1
-    }
-    
     @MainActor
     func advanceToNextRound() {
         if currentRound < totalRound - 1 {
