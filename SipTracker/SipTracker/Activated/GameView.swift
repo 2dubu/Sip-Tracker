@@ -44,6 +44,10 @@ struct GameView: View {
                 }
             }
         }
+        .navigationDestination(isPresented: $viewModel.showCompleteView) {
+            GameCompleteView(wrongCount: viewModel.wrongCount())
+                .environmentObject(appState)
+        }
         .onDisappear {
             hideKeyboard()
         }

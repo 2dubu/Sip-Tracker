@@ -12,10 +12,14 @@ final class GameViewModel: ObservableObject {
     // 게임 관리
     @Published var currentRound: Int = .zero
     @Published var errorMessage: String? = nil
+    @Published var showCompleteView: Bool = false
     var totalRound: Int = 3
     
     // 정답 처리
     @Published var correction: [Bool?] = Array(repeating: nil, count: 3)
+    func wrongCount() -> Int {
+        correction.filter{ $0 == false }.count
+    }
     
     // 타이머 관련
     @Published var remainingTime: Int = 0
@@ -32,6 +36,18 @@ final class GameViewModel: ObservableObject {
     
     func timerIsEnd() {
         self.currentRound += 1
+    }
+    
+    @MainActor
+    func advanceToNextRound() {
+        if currentRound < totalRound - 1 {
+            currentRound += 1
+            errorMessage = nil
+            startTimer() // 새로운 라운드 타이머 시작
+        } else {
+            showCompleteView = true
+            stopTimer() // 마지막 라운드 시 타이머 정리
+        }
     }
     
     // MARK: - 구구단
@@ -145,58 +161,57 @@ final class GameViewModel: ObservableObject {
             "바람이 불어오는 곳",
             "아름다운 우리의 강산",
             "나의 꿈은 맑은 바람이 되어서",
-            "행복은 스스로 만드는 것.",
+            "행복은 스스로 만드는 것",
             "내가 걸어온 길은 나의 역사다.",
-            "실패는 성공의 어머니.",
+            "실패는 성공의 어머니",
             "더 나은 내일을 위해 도전하자.",
-            "노력은 배신하지 않는다.",
-            "나는 내 인생의 주인공이다.",
-            "지금 이 순간 최선을 다하자.",
-            "하늘은 스스로 돕는 자를 돕는다.",
-            "작은 일에도 감사하자.",
-            "내일은 오늘의 결과다.",
-            "긍정적인 생각이 긍정적인 결과를 만든다.",
-            "기회는 준비된 자에게 온다.",
-            "힘들어도 끝까지 해내자.",
-            "공부는 평생의 자산이다.",
-            "모든 일에는 뜻이 있다.",
-            "열정은 성공의 열쇠다.",
-            "이 순간이 다시 오지 않는다.",
-            "오늘을 후회 없이 살자.",
-            "나 자신을 믿어야 한다.",
-            "끝까지 포기하지 말자.",
-            "나는 할 수 있다.",
-            "배움에는 끝이 없다.",
-            "시간을 소중히 여기자.",
-            "작은 노력이 큰 변화를 만든다.",
-            "집중하면 불가능은 없다.",
-            "끈기가 성공을 만든다.",
-            "내가 선택한 길을 믿자.",
-            "감사하는 마음이 행복을 부른다.",
-            "마음을 열고 배우자.",
-            "책 읽는 시간을 가지자.",
-            "하루 한 걸음씩 나아가자.",
-            "목표를 잊지 말자.",
-            "꾸준함이 곧 실력이다.",
-            "오늘이 내일의 시작이다.",
-            "도전하지 않으면 아무것도 없다.",
-            "항상 최선을 다하자.",
-            "지혜는 경험에서 나온다.",
-            "나를 사랑하는 법을 배우자.",
-            "매 순간 배우는 자세로 살자.",
-            "삶은 도전의 연속이다.",
-            "지금의 노력은 미래의 희망이다.",
-            "내가 꿈꾸는 세상을 만들자.",
-            "웃음은 최고의 명약이다.",
-            "내가 하는 모든 일이 중요하다.",
-            "오늘의 실수는 내일의 교훈이다.",
-            "주어진 순간에 감사하자.",
-            "내가 하는 일이 세상을 바꾼다.",
-            "긍정의 힘을 믿자.",
-            "꾸준히 노력하는 사람이 아름답다.",
-            "좋은 습관이 성공을 만든다.",
-            "내 인생의 주인은 나다.",
-            "성공은 준비된 자의 몫이다."
+            "노력은 배신하지 않는다",
+            "나는 내 인생의 주인공이다",
+            "지금 이 순간 최선을 다하자",
+            "하늘은 스스로 돕는 자를 돕는다",
+            "작은 일에도 감사하자",
+            "내일은 오늘의 결과다",
+            "긍정적인 생각이 긍정적인 결과를 만든다",
+            "기회는 준비된 자에게 온다",
+            "힘들어도 끝까지 해내자",
+            "공부는 평생의 자산이다",
+            "모든 일에는 뜻이 있다",
+            "열정은 성공의 열쇠다",
+            "이 순간이 다시 오지 않는다",
+            "오늘을 후회 없이 살자",
+            "나 자신을 믿어야 한다",
+            "끝까지 포기하지 말자",
+            "배움에는 끝이 없다",
+            "시간을 소중히 여기자",
+            "작은 노력이 큰 변화를 만든다",
+            "집중하면 불가능은 없다",
+            "끈기가 성공을 만든다",
+            "내가 선택한 길을 믿자",
+            "감사하는 마음이 행복을 부른다",
+            "마음을 열고 배우자",
+            "책 읽는 시간을 가지자",
+            "하루 한 걸음씩 나아가자",
+            "목표를 절대 잊지 말자",
+            "꾸준함이 곧 실력이다",
+            "오늘이 내일의 시작이다",
+            "도전하지 않으면 아무것도 없다",
+            "항상 최선을 다하자",
+            "지혜는 경험에서 나온다",
+            "나를 사랑하는 법을 배우자",
+            "매 순간 배우는 자세로 살자",
+            "삶은 도전의 연속이다",
+            "지금의 노력은 미래의 희망이다",
+            "내가 꿈꾸는 세상을 만들자",
+            "웃음은 최고의 명약이다",
+            "내가 하는 모든 일이 중요하다",
+            "오늘의 실수는 내일의 교훈이다",
+            "주어진 순간에 감사하자",
+            "내가 하는 일이 세상을 바꾼다",
+            "긍정의 힘을 믿고 노력하자",
+            "꾸준히 노력하는 사람이 아름답다",
+            "좋은 습관이 성공을 만든다",
+            "내 인생의 주인은 나다",
+            "성공은 준비된 자의 몫이다"
         ]
         typingGameSentence = sentences.randomElement()!
         userTypedText = ""
@@ -205,7 +220,7 @@ final class GameViewModel: ObservableObject {
     }
     
     @MainActor
-    func submitTypingGame() {
+    func submitTypingGame(completion: @escaping () -> Void) {
         stopTimer()
         correction[currentRound] = userTypedText == typingGameSentence
         
@@ -213,6 +228,7 @@ final class GameViewModel: ObservableObject {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.advanceToNextRound()
+            completion()
         }
     }
 }
@@ -247,18 +263,6 @@ extension GameViewModel {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             self?.advanceToNextRound()
-        }
-    }
-    
-    // 라운드 전환
-    @MainActor
-    func advanceToNextRound() {
-        if currentRound < totalRound - 1 {
-            currentRound += 1
-            errorMessage = nil
-            startTimer() // 새로운 라운드 타이머 시작
-        } else {
-            stopTimer() // 마지막 라운드 시 타이머 정리
         }
     }
 

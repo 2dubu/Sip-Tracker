@@ -41,7 +41,7 @@ struct FindingGame: View {
 
             Spacer()
         }
-        .padding(.top, 40 + 40)
+        .padding(.top, 42 + 40)
         .onAppear {
             viewModel.generateFindingGameGrid()
         }

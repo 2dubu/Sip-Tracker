@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TypingGame: View {
+    @EnvironmentObject var appState: AppStateManager
     @ObservedObject var viewModel: GameViewModel
 
     var body: some View {
@@ -33,7 +34,9 @@ struct TypingGame: View {
                 .frame(width: 300, height: 100)
 
             Button {
-                viewModel.submitTypingGame()
+                viewModel.submitTypingGame {
+                    appState.pop()
+                }
                 hideKeyboard()
             } label: {
                 Text("제출")
@@ -46,11 +49,12 @@ struct TypingGame: View {
                             .foregroundColor(Color(uiColor: .gray.withAlphaComponent(0.2)))
                     )
             }
-            .disabled(viewModel.userTypedText.isEmpty)
+            .disabled(viewModel.userTypedText.isEmpty || viewModel.isSubmitted())
 
             Spacer()
         }
-        .padding(.top, 40)
+        .keyboardHideable()
+        .padding(.top, 42 + 40)
         .onAppear {
             viewModel.startTypingGame()
         }

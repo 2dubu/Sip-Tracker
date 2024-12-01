@@ -48,7 +48,7 @@ struct MultiplicationGame: View {
                             .foregroundColor(Color(uiColor: .gray.withAlphaComponent(0.2)))
                     )
             }
-            .disabled(viewModel.userAnswer.isEmpty)
+            .disabled(viewModel.userAnswer.isEmpty || viewModel.isSubmitted())
             
             Spacer()
         }
