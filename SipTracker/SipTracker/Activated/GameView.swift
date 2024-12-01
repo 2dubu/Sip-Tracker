@@ -21,7 +21,7 @@ struct GameView: View {
                 FindingGame(viewModel: viewModel)
                     .tag(1)
                 
-                TypingGame()
+                TypingGame(viewModel: viewModel)
                     .tag(2)
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
