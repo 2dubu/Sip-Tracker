@@ -65,6 +65,50 @@ final class GameViewModel: ObservableObject {
             self.advanceToNextRound()
         }
     }
+    
+    // MARK: 다른 글자 찾기
+    @Published var gridItems: [String] = []
+    @Published var selectedIndex: Int? = nil
+    private var uniqueItemIndex: Int = -1
+    
+    @MainActor
+    func generateFindingGameGrid() {
+        // Define the cases with their respective repeated and unique items
+        let cases: [(repeatedItem: String, uniqueItem: String)] = [
+            (repeatedItem: "디사", uniqueItem: "다시"),
+            (repeatedItem: "소주", uniqueItem: "수조"),
+            (repeatedItem: "맥주", uniqueItem: "맥수"),
+            (repeatedItem: "한잔", uniqueItem: "한산"),
+            (repeatedItem: "호우", uniqueItem: "후오"),
+        ]
+        let selectedCase = cases.randomElement()!
+        
+        // Generate the grid with 15 repeated items and 1 unique item
+        gridItems = Array(repeating: selectedCase.repeatedItem, count: 15) + [selectedCase.uniqueItem]
+        gridItems.shuffle()
+        
+        // Identify the index of the unique item
+        if let index = gridItems.firstIndex(of: selectedCase.uniqueItem) {
+            uniqueItemIndex = index
+        }
+        selectedIndex = nil
+        
+        // Start the timer
+        startTimer()
+    }
+    
+    @MainActor
+    func submitFindingGame(at index: Int) {
+        stopTimer()
+        selectedIndex = index
+        let isCorrect = index == uniqueItemIndex
+        correction[currentRound] = isCorrect
+        errorMessage = isCorrect ? "정답입니다!" : "오답입니다!"
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.advanceToNextRound()
+        }
+    }
 }
 
 // MARK: - Timer functions

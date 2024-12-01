@@ -36,6 +36,7 @@ struct MultiplicationGame: View {
             
             Button {
                 viewModel.submitMultiplicationGame()
+                hideKeyboard()
             } label: {
                 Text("제출")
                     .font(.title3)

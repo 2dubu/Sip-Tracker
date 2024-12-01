@@ -18,7 +18,7 @@ struct GameView: View {
                 MultiplicationGame(viewModel: viewModel)
                     .tag(0)
                 
-                FindingGame()
+                FindingGame(viewModel: viewModel)
                     .tag(1)
                 
                 TypingGame()
@@ -43,6 +43,9 @@ struct GameView: View {
                         .padding(.bottom, 40)
                 }
             }
+        }
+        .onDisappear {
+            hideKeyboard()
         }
     }
 }
