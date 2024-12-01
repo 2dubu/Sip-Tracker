@@ -27,7 +27,7 @@ struct MyPageView: View {
                 Spacer()
                 
                 Button {
-                    appState.popToRootAtMyPage()
+                    appState.pop()
                 } label: {
                     Image(systemName: "house")
                         .resizable()

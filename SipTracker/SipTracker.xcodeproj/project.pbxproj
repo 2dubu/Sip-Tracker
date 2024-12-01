@@ -24,9 +24,11 @@
 		C6516F772CFC3BBF00FCFAF2 /* UserSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F762CFC3BBF00FCFAF2 /* UserSetupView.swift */; };
 		C6516F7B2CFC53C600FCFAF2 /* MyCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F7A2CFC53C600FCFAF2 /* MyCalendar.swift */; };
 		C6516F7D2CFC5A5700FCFAF2 /* SelectedDateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F7C2CFC5A5700FCFAF2 /* SelectedDateEventView.swift */; };
-		C6F07E9A2CFC654800F44F30 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = C6F07E992CFC654800F44F30 /* SwiftUIIntrospect */; };
-		C6F07E9C2CFC654800F44F30 /* SwiftUIIntrospect-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C6F07E9B2CFC654800F44F30 /* SwiftUIIntrospect-Dynamic */; };
-		C6F07E9E2CFC654800F44F30 /* SwiftUIIntrospect-Static in Frameworks */ = {isa = PBXBuildFile; productRef = C6F07E9D2CFC654800F44F30 /* SwiftUIIntrospect-Static */; };
+		C6F07EA02CFC65ED00F44F30 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F07E9F2CFC65EA00F44F30 /* GameView.swift */; };
+		C6F07EA22CFC67A100F44F30 /* MultiplicationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F07EA12CFC678A00F44F30 /* MultiplicationGame.swift */; };
+		C6F07EA42CFC67B800F44F30 /* FindingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F07EA32CFC67A500F44F30 /* FindingGame.swift */; };
+		C6F07EA62CFC67C900F44F30 /* TypingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F07EA52CFC67BB00F44F30 /* TypingGame.swift */; };
+		C6F07EA92CFC69E300F44F30 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = C6F07EA82CFC69E300F44F30 /* SwiftUIIntrospect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,10 @@
 		C6516F7A2CFC53C600FCFAF2 /* MyCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendar.swift; sourceTree = "<group>"; };
 		C6516F7C2CFC5A5700FCFAF2 /* SelectedDateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDateEventView.swift; sourceTree = "<group>"; };
 		C6C4C10B2CDD056E00C80E6E /* SipTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SipTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6F07E9F2CFC65EA00F44F30 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		C6F07EA12CFC678A00F44F30 /* MultiplicationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationGame.swift; sourceTree = "<group>"; };
+		C6F07EA32CFC67A500F44F30 /* FindingGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingGame.swift; sourceTree = "<group>"; };
+		C6F07EA52CFC67BB00F44F30 /* TypingGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6516F6B2CFC375100FCFAF2 /* FSCalendar in Frameworks */,
-				C6F07E9A2CFC654800F44F30 /* SwiftUIIntrospect in Frameworks */,
-				C6F07E9C2CFC654800F44F30 /* SwiftUIIntrospect-Dynamic in Frameworks */,
-				C6F07E9E2CFC654800F44F30 /* SwiftUIIntrospect-Static in Frameworks */,
+				C6F07EA92CFC69E300F44F30 /* SwiftUIIntrospect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,10 @@
 		C6516F6C2CFC382500FCFAF2 /* Activated */ = {
 			isa = PBXGroup;
 			children = (
+				C6F07E9F2CFC65EA00F44F30 /* GameView.swift */,
+				C6F07EA12CFC678A00F44F30 /* MultiplicationGame.swift */,
+				C6F07EA32CFC67A500F44F30 /* FindingGame.swift */,
+				C6F07EA52CFC67BB00F44F30 /* TypingGame.swift */,
 			);
 			path = Activated;
 			sourceTree = "<group>";
@@ -169,9 +177,7 @@
 			name = SipTracker;
 			packageProductDependencies = (
 				C6516F6A2CFC375100FCFAF2 /* FSCalendar */,
-				C6F07E992CFC654800F44F30 /* SwiftUIIntrospect */,
-				C6F07E9B2CFC654800F44F30 /* SwiftUIIntrospect-Dynamic */,
-				C6F07E9D2CFC654800F44F30 /* SwiftUIIntrospect-Static */,
+				C6F07EA82CFC69E300F44F30 /* SwiftUIIntrospect */,
 			);
 			productName = SipTracker;
 			productReference = C6C4C10B2CDD056E00C80E6E /* SipTracker.app */;
@@ -203,7 +209,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				C6516F692CFC375100FCFAF2 /* XCRemoteSwiftPackageReference "FSCalendar" */,
-				C6F07E982CFC654800F44F30 /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
+				C6F07EA72CFC69E300F44F30 /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C6C4C10C2CDD056E00C80E6E /* Products */;
@@ -233,15 +239,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6516F7D2CFC5A5700FCFAF2 /* SelectedDateEventView.swift in Sources */,
+				C6F07EA42CFC67B800F44F30 /* FindingGame.swift in Sources */,
+				C6F07EA62CFC67C900F44F30 /* TypingGame.swift in Sources */,
 				C6516F522CF5A02E00FCFAF2 /* TimerManager.swift in Sources */,
 				C6516F472CF5982200FCFAF2 /* Constant.swift in Sources */,
 				C6516F3E2CF5978D00FCFAF2 /* ActivatedView.swift in Sources */,
+				C6F07EA02CFC65ED00F44F30 /* GameView.swift in Sources */,
 				C6516F3F2CF5978D00FCFAF2 /* ContentView.swift in Sources */,
 				C6516F402CF5978D00FCFAF2 /* HomeView.swift in Sources */,
 				C6516F7B2CFC53C600FCFAF2 /* MyCalendar.swift in Sources */,
 				C6516F502CF59FAD00FCFAF2 /* MyPageView.swift in Sources */,
 				C6516F422CF5978D00FCFAF2 /* RootView.swift in Sources */,
 				C6516F432CF5978D00FCFAF2 /* SipTrackerApp.swift in Sources */,
+				C6F07EA22CFC67A100F44F30 /* MultiplicationGame.swift in Sources */,
 				C6516F4E2CF59E7600FCFAF2 /* DrinkRecord.swift in Sources */,
 				C6516F772CFC3BBF00FCFAF2 /* UserSetupView.swift in Sources */,
 				C6516F712CFC3A8900FCFAF2 /* AppStateManager.swift in Sources */,
@@ -473,7 +483,7 @@
 				minimumVersion = 2.8.4;
 			};
 		};
-		C6F07E982CFC654800F44F30 /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
+		C6F07EA72CFC69E300F44F30 /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/swiftui-introspect.git";
 			requirement = {
@@ -489,20 +499,10 @@
 			package = C6516F692CFC375100FCFAF2 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
 		};
-		C6F07E992CFC654800F44F30 /* SwiftUIIntrospect */ = {
+		C6F07EA82CFC69E300F44F30 /* SwiftUIIntrospect */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C6F07E982CFC654800F44F30 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			package = C6F07EA72CFC69E300F44F30 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
 			productName = SwiftUIIntrospect;
-		};
-		C6F07E9B2CFC654800F44F30 /* SwiftUIIntrospect-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C6F07E982CFC654800F44F30 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
-			productName = "SwiftUIIntrospect-Dynamic";
-		};
-		C6F07E9D2CFC654800F44F30 /* SwiftUIIntrospect-Static */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C6F07E982CFC654800F44F30 /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
-			productName = "SwiftUIIntrospect-Static";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

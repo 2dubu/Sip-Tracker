@@ -23,6 +23,8 @@ struct RootView: View {
                     HomeView()
                 case .activated:
                     ActivatedView()
+                case .game:
+                    GameView()
                 case .myPage:
                     MyPageView()
                 }

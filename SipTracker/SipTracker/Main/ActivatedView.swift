@@ -83,7 +83,7 @@ struct ActivatedView: View {
                     drinkedGlasses += 1
                 } label: {
                     RoundedRectangle(cornerRadius: 12)
-                        .foregroundStyle(Color(uiColor: .lightGray))
+                        .foregroundColor(Color(uiColor: .gray.withAlphaComponent(0.2)))
                         .frame(width: 140, height: 60)
                         .overlay {
                             Text("마셨어요").foregroundStyle(.black)
@@ -91,10 +91,10 @@ struct ActivatedView: View {
                 }
 
                 Button {
-                    // go gameView
+                    appState.switchToState(.game)
                 } label: {
                     RoundedRectangle(cornerRadius: 12)
-                        .foregroundStyle(Color(uiColor: .lightGray))
+                        .foregroundColor(Color(uiColor: .gray.withAlphaComponent(0.2)))
                         .frame(width: 140, height: 60)
                         .overlay {
                             Text("게임하기").foregroundStyle(.black)

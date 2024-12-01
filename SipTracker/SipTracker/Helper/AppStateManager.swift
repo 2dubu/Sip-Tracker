@@ -12,6 +12,7 @@ final class AppStateManager: ObservableObject {
         case userSetup
         case home
         case activated
+        case game
         case myPage
     }
     
@@ -27,7 +28,7 @@ final class AppStateManager: ObservableObject {
         }
     }
     
-    func popToRootAtMyPage() {
+    func pop() {
         withAnimation {
             switchToState(previousView == .home ? .home : .activated)
         }
