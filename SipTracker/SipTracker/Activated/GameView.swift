@@ -34,6 +34,14 @@ struct GameView: View {
                 header
                 
                 Spacer()
+                
+                if let errorMessage = viewModel.errorMessage {
+                    Text(errorMessage)
+                        .font(.title2)
+                        .bold()
+                        .foregroundColor(viewModel.isCorrect() ? .green : .red)
+                        .padding(.bottom, 40)
+                }
             }
         }
     }
@@ -54,6 +62,11 @@ extension GameView {
                     .frame(width: 20, height: 20)
                     .foregroundStyle(.black)
             }
+            
+            Spacer()
+            
+            Text("남은 시간 : \(viewModel.remainingTime)")
+                .font(.headline)
             
             Spacer()
             

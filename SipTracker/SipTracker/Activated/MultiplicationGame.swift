@@ -50,14 +50,6 @@ struct MultiplicationGame: View {
             .disabled(viewModel.userAnswer.isEmpty)
             
             Spacer()
-            
-            if viewModel.isSubmitted() {
-                Text(viewModel.isCorrect() ? "정답입니다! 🎉" : "틀렸습니다. 😢")
-                    .font(.title)
-                    .foregroundColor(viewModel.isCorrect() ? .green : .red)
-                    .padding(.bottom, 40)
-                    
-            }
         }
         .padding(.top, 42 + 40)
         .keyboardHideable()
