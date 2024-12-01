@@ -8,6 +8,15 @@
 import SwiftUI
 import SwiftData
 
+@Model
+class Item: Identifiable {
+    var timestamp: Date
+    
+    init(timestamp: Date) {
+        self.timestamp = timestamp
+    }
+}
+
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]

@@ -6,33 +6,133 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C6516F3C2CF5978D00FCFAF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6516F322CF5978D00FCFAF2 /* Preview Assets.xcassets */; };
+		C6516F3D2CF5978D00FCFAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6516F352CF5978D00FCFAF2 /* Assets.xcassets */; };
+		C6516F3E2CF5978D00FCFAF2 /* ActivatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F342CF5978D00FCFAF2 /* ActivatedView.swift */; };
+		C6516F3F2CF5978D00FCFAF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F362CF5978D00FCFAF2 /* ContentView.swift */; };
+		C6516F402CF5978D00FCFAF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F372CF5978D00FCFAF2 /* HomeView.swift */; };
+		C6516F422CF5978D00FCFAF2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F392CF5978D00FCFAF2 /* RootView.swift */; };
+		C6516F432CF5978D00FCFAF2 /* SipTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F3A2CF5978D00FCFAF2 /* SipTrackerApp.swift */; };
+		C6516F472CF5982200FCFAF2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F462CF5981D00FCFAF2 /* Constant.swift */; };
+		C6516F4E2CF59E7600FCFAF2 /* DrinkRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F4D2CF59E7600FCFAF2 /* DrinkRecord.swift */; };
+		C6516F502CF59FAD00FCFAF2 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F4F2CF59FA900FCFAF2 /* MyPageView.swift */; };
+		C6516F522CF5A02E00FCFAF2 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F512CF5A02E00FCFAF2 /* TimerManager.swift */; };
+		C6516F6B2CFC375100FCFAF2 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C6516F6A2CFC375100FCFAF2 /* FSCalendar */; };
+		C6516F712CFC3A8900FCFAF2 /* AppStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F702CFC3A8600FCFAF2 /* AppStateManager.swift */; };
+		C6516F732CFC3B6900FCFAF2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F722CFC3B6900FCFAF2 /* User.swift */; };
+		C6516F772CFC3BBF00FCFAF2 /* UserSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F762CFC3BBF00FCFAF2 /* UserSetupView.swift */; };
+		C6516F7B2CFC53C600FCFAF2 /* MyCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F7A2CFC53C600FCFAF2 /* MyCalendar.swift */; };
+		C6516F7D2CFC5A5700FCFAF2 /* SelectedDateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F7C2CFC5A5700FCFAF2 /* SelectedDateEventView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		C6516F322CF5978D00FCFAF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C6516F342CF5978D00FCFAF2 /* ActivatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivatedView.swift; sourceTree = "<group>"; };
+		C6516F352CF5978D00FCFAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6516F362CF5978D00FCFAF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6516F372CF5978D00FCFAF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C6516F392CF5978D00FCFAF2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		C6516F3A2CF5978D00FCFAF2 /* SipTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SipTrackerApp.swift; sourceTree = "<group>"; };
+		C6516F462CF5981D00FCFAF2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		C6516F4D2CF59E7600FCFAF2 /* DrinkRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRecord.swift; sourceTree = "<group>"; };
+		C6516F4F2CF59FA900FCFAF2 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		C6516F512CF5A02E00FCFAF2 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		C6516F702CFC3A8600FCFAF2 /* AppStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateManager.swift; sourceTree = "<group>"; };
+		C6516F722CFC3B6900FCFAF2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C6516F762CFC3BBF00FCFAF2 /* UserSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetupView.swift; sourceTree = "<group>"; };
+		C6516F7A2CFC53C600FCFAF2 /* MyCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendar.swift; sourceTree = "<group>"; };
+		C6516F7C2CFC5A5700FCFAF2 /* SelectedDateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDateEventView.swift; sourceTree = "<group>"; };
 		C6C4C10B2CDD056E00C80E6E /* SipTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SipTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C6C4C10D2CDD056E00C80E6E /* SipTracker */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SipTracker;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C6C4C1082CDD056E00C80E6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6516F6B2CFC375100FCFAF2 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6516F332CF5978D00FCFAF2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C6516F322CF5978D00FCFAF2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C6516F3B2CF5978D00FCFAF2 /* SipTracker */ = {
+			isa = PBXGroup;
+			children = (
+				C6516F3A2CF5978D00FCFAF2 /* SipTrackerApp.swift */,
+				C6516F362CF5978D00FCFAF2 /* ContentView.swift */,
+				C6516F392CF5978D00FCFAF2 /* RootView.swift */,
+				C6516F6F2CFC39D500FCFAF2 /* Helper */,
+				C6516F452CF597AD00FCFAF2 /* Main */,
+				C6516F6D2CFC383200FCFAF2 /* MyPage */,
+				C6516F6C2CFC382500FCFAF2 /* Activated */,
+				C6516F6E2CFC399E00FCFAF2 /* Entity */,
+				C6516F332CF5978D00FCFAF2 /* Preview Content */,
+				C6516F352CF5978D00FCFAF2 /* Assets.xcassets */,
+			);
+			path = SipTracker;
+			sourceTree = "<group>";
+		};
+		C6516F452CF597AD00FCFAF2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C6516F762CFC3BBF00FCFAF2 /* UserSetupView.swift */,
+				C6516F372CF5978D00FCFAF2 /* HomeView.swift */,
+				C6516F342CF5978D00FCFAF2 /* ActivatedView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C6516F6C2CFC382500FCFAF2 /* Activated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Activated;
+			sourceTree = "<group>";
+		};
+		C6516F6D2CFC383200FCFAF2 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				C6516F4F2CF59FA900FCFAF2 /* MyPageView.swift */,
+				C6516F7C2CFC5A5700FCFAF2 /* SelectedDateEventView.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		C6516F6E2CFC399E00FCFAF2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C6516F722CFC3B6900FCFAF2 /* User.swift */,
+				C6516F4D2CF59E7600FCFAF2 /* DrinkRecord.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C6516F6F2CFC39D500FCFAF2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C6516F7A2CFC53C600FCFAF2 /* MyCalendar.swift */,
+				C6516F462CF5981D00FCFAF2 /* Constant.swift */,
+				C6516F702CFC3A8600FCFAF2 /* AppStateManager.swift */,
+				C6516F512CF5A02E00FCFAF2 /* TimerManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		C6C4C1022CDD056E00C80E6E = {
 			isa = PBXGroup;
 			children = (
-				C6C4C10D2CDD056E00C80E6E /* SipTracker */,
+				C6516F3B2CF5978D00FCFAF2 /* SipTracker */,
 				C6C4C10C2CDD056E00C80E6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,11 +160,9 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				C6C4C10D2CDD056E00C80E6E /* SipTracker */,
-			);
 			name = SipTracker;
 			packageProductDependencies = (
+				C6516F6A2CFC375100FCFAF2 /* FSCalendar */,
 			);
 			productName = SipTracker;
 			productReference = C6C4C10B2CDD056E00C80E6E /* SipTracker.app */;
@@ -94,6 +192,9 @@
 			);
 			mainGroup = C6C4C1022CDD056E00C80E6E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C6516F692CFC375100FCFAF2 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C6C4C10C2CDD056E00C80E6E /* Products */;
 			projectDirPath = "";
@@ -109,6 +210,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6516F3C2CF5978D00FCFAF2 /* Preview Assets.xcassets in Resources */,
+				C6516F3D2CF5978D00FCFAF2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +222,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6516F7D2CFC5A5700FCFAF2 /* SelectedDateEventView.swift in Sources */,
+				C6516F522CF5A02E00FCFAF2 /* TimerManager.swift in Sources */,
+				C6516F472CF5982200FCFAF2 /* Constant.swift in Sources */,
+				C6516F3E2CF5978D00FCFAF2 /* ActivatedView.swift in Sources */,
+				C6516F3F2CF5978D00FCFAF2 /* ContentView.swift in Sources */,
+				C6516F402CF5978D00FCFAF2 /* HomeView.swift in Sources */,
+				C6516F7B2CFC53C600FCFAF2 /* MyCalendar.swift in Sources */,
+				C6516F502CF59FAD00FCFAF2 /* MyPageView.swift in Sources */,
+				C6516F422CF5978D00FCFAF2 /* RootView.swift in Sources */,
+				C6516F432CF5978D00FCFAF2 /* SipTrackerApp.swift in Sources */,
+				C6516F4E2CF59E7600FCFAF2 /* DrinkRecord.swift in Sources */,
+				C6516F772CFC3BBF00FCFAF2 /* UserSetupView.swift in Sources */,
+				C6516F712CFC3A8900FCFAF2 /* AppStateManager.swift in Sources */,
+				C6516F732CFC3B6900FCFAF2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,6 +412,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -334,6 +453,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6516F692CFC375100FCFAF2 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6516F6A2CFC375100FCFAF2 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6516F692CFC375100FCFAF2 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6C4C1032CDD056E00C80E6E /* Project object */;
 }
