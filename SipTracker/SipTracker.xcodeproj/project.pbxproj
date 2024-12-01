@@ -17,7 +17,7 @@
 		C6516F472CF5982200FCFAF2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F462CF5981D00FCFAF2 /* Constant.swift */; };
 		C6516F4E2CF59E7600FCFAF2 /* DrinkRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F4D2CF59E7600FCFAF2 /* DrinkRecord.swift */; };
 		C6516F502CF59FAD00FCFAF2 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F4F2CF59FA900FCFAF2 /* MyPageView.swift */; };
-		C6516F522CF5A02E00FCFAF2 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F512CF5A02E00FCFAF2 /* TimerManager.swift */; };
+		C6516F522CF5A02E00FCFAF2 /* DrinkingSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F512CF5A02E00FCFAF2 /* DrinkingSessionManager.swift */; };
 		C6516F6B2CFC375100FCFAF2 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = C6516F6A2CFC375100FCFAF2 /* FSCalendar */; };
 		C6516F712CFC3A8900FCFAF2 /* AppStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F702CFC3A8600FCFAF2 /* AppStateManager.swift */; };
 		C6516F732CFC3B6900FCFAF2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F722CFC3B6900FCFAF2 /* User.swift */; };
@@ -45,7 +45,7 @@
 		C6516F462CF5981D00FCFAF2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C6516F4D2CF59E7600FCFAF2 /* DrinkRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRecord.swift; sourceTree = "<group>"; };
 		C6516F4F2CF59FA900FCFAF2 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
-		C6516F512CF5A02E00FCFAF2 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		C6516F512CF5A02E00FCFAF2 /* DrinkingSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingSessionManager.swift; sourceTree = "<group>"; };
 		C6516F702CFC3A8600FCFAF2 /* AppStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateManager.swift; sourceTree = "<group>"; };
 		C6516F722CFC3B6900FCFAF2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C6516F762CFC3BBF00FCFAF2 /* UserSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetupView.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 				C6516F6F2CFC39D500FCFAF2 /* Helper */,
 				C6516F452CF597AD00FCFAF2 /* Main */,
 				C6516F6D2CFC383200FCFAF2 /* MyPage */,
-				C6516F6C2CFC382500FCFAF2 /* Activated */,
+				C6516F6C2CFC382500FCFAF2 /* Game */,
 				C6516F6E2CFC399E00FCFAF2 /* Entity */,
 				C6516F332CF5978D00FCFAF2 /* Preview Content */,
 				C6516F352CF5978D00FCFAF2 /* Assets.xcassets */,
@@ -109,7 +109,7 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		C6516F6C2CFC382500FCFAF2 /* Activated */ = {
+		C6516F6C2CFC382500FCFAF2 /* Game */ = {
 			isa = PBXGroup;
 			children = (
 				C6F07E9F2CFC65EA00F44F30 /* GameView.swift */,
@@ -119,7 +119,7 @@
 				C6F07EA52CFC67BB00F44F30 /* TypingGame.swift */,
 				C6DDF3F52CFC926B00421325 /* GameCompleteView.swift */,
 			);
-			path = Activated;
+			path = Game;
 			sourceTree = "<group>";
 		};
 		C6516F6D2CFC383200FCFAF2 /* MyPage */ = {
@@ -146,7 +146,7 @@
 				C6516F7A2CFC53C600FCFAF2 /* MyCalendar.swift */,
 				C6516F462CF5981D00FCFAF2 /* Constant.swift */,
 				C6516F702CFC3A8600FCFAF2 /* AppStateManager.swift */,
-				C6516F512CF5A02E00FCFAF2 /* TimerManager.swift */,
+				C6516F512CF5A02E00FCFAF2 /* DrinkingSessionManager.swift */,
 				C6DDF3F32CFC821000421325 /* KeyboardHideable.swift */,
 			);
 			path = Helper;
@@ -250,7 +250,7 @@
 				C6516F7D2CFC5A5700FCFAF2 /* SelectedDateEventView.swift in Sources */,
 				C6F07EA42CFC67B800F44F30 /* FindingGame.swift in Sources */,
 				C6F07EA62CFC67C900F44F30 /* TypingGame.swift in Sources */,
-				C6516F522CF5A02E00FCFAF2 /* TimerManager.swift in Sources */,
+				C6516F522CF5A02E00FCFAF2 /* DrinkingSessionManager.swift in Sources */,
 				C6516F472CF5982200FCFAF2 /* Constant.swift in Sources */,
 				C6DDF3F42CFC821100421325 /* KeyboardHideable.swift in Sources */,
 				C6DDF3F62CFC926F00421325 /* GameCompleteView.swift in Sources */,

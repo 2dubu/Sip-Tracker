@@ -10,7 +10,7 @@ import SwiftData
 
 struct RootView: View {
     @StateObject private var appState = AppStateManager()
-    @StateObject private var timerManager = TimerManager()
+    @StateObject private var drinkingSessionManager = DrinkingSessionManager()
     @Query var userData: [User]
 
     var body: some View {
@@ -30,10 +30,10 @@ struct RootView: View {
                 }
             }
             .environmentObject(appState)
-            .environmentObject(timerManager)
+            .environmentObject(drinkingSessionManager)
         }
         .onAppear {
-            timerManager.stopTimer()
+            drinkingSessionManager.stopTimer()
             checkUserSettings()
         }
     }

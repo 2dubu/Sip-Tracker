@@ -1,5 +1,5 @@
 //
-//  TimerManager.swift
+//  DrinkingSessionManager.swift
 //  SipTracker
 //
 //  Created by 이건우 on 11/26/24.
@@ -8,11 +8,14 @@
 import Combine
 import Foundation
 
-final class TimerManager: ObservableObject {
+final class DrinkingSessionManager: ObservableObject {
     @Published var elapsedSeconds: Int = 0
+    @Published var drinkedGlasses: Int = 0
     @Published var formattedTime: String = "00:00"
+    
     private var timer: AnyCancellable?
     
+    // 타이머 시작
     func startTimer() {
         if timer == nil {
             timer = Timer.publish(every: 1, on: .main, in: .common)
@@ -27,8 +30,14 @@ final class TimerManager: ObservableObject {
     
     func stopTimer() {
         elapsedSeconds = 0
+        drinkedGlasses = 0
+        formattedTime = "00:00"
         timer?.cancel()
         timer = nil
+    }
+    
+    func addGlass() {
+        drinkedGlasses += 1
     }
     
     private func formatTime(_ seconds: Int) -> String {

@@ -8,13 +8,12 @@
 import SwiftUI
 import Combine
 
+
 struct ActivatedView: View {
     @EnvironmentObject var appState: AppStateManager
-    @EnvironmentObject private var timerManager: TimerManager
+    @EnvironmentObject private var sessionManager: DrinkingSessionManager
     @Environment(\.modelContext) var modelContext
     
-    @State private var drinkedGlasses: Int = 0
-
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -39,7 +38,7 @@ struct ActivatedView: View {
                 
                 Text(":")
                 
-                Text("\(drinkedGlasses) 잔")
+                Text("\(sessionManager.drinkedGlasses) 잔")
                     .padding(.leading, 10)
                 
                 Spacer()
@@ -52,7 +51,7 @@ struct ActivatedView: View {
                 Text(":")
                     .padding(.leading, 6)
                 
-                Text(timerManager.formattedTime)
+                Text(sessionManager.formattedTime)
                     .padding(.horizontal, 10)
             }
             .padding(.horizontal, 40)
@@ -62,7 +61,7 @@ struct ActivatedView: View {
             Button {
                 saveRecord()
                 withAnimation { appState.switchToState(.home) }
-                timerManager.stopTimer()
+                sessionManager.stopTimer()
             } label: {
                 Image("logo2")
                     .resizable()
@@ -80,7 +79,7 @@ struct ActivatedView: View {
             
             HStack(spacing: 25) {
                 Button {
-                    drinkedGlasses += 1
+                    sessionManager.addGlass()
                 } label: {
                     RoundedRectangle(cornerRadius: 12)
                         .foregroundColor(Color(uiColor: .gray.withAlphaComponent(0.2)))
@@ -104,12 +103,16 @@ struct ActivatedView: View {
             .padding(.bottom, 50)
         }
         .onAppear {
-            timerManager.startTimer()
+            sessionManager.startTimer()
         }
     }
     
     private func saveRecord() {
-        let record = DrinkRecord(date: Date(), duration: timerManager.elapsedSeconds, glasses: drinkedGlasses)
+        let record = DrinkRecord(
+            date: Date(),
+            duration: sessionManager.elapsedSeconds,
+            glasses: sessionManager.drinkedGlasses
+        )
         modelContext.insert(record)
     }
 }
