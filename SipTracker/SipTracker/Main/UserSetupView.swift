@@ -25,7 +25,7 @@ struct UserSetupView: View {
                 .resizable()
                 .scaledToFit()
                 .overlay(alignment: .bottom) {
-                    Text("한모금")
+                    Text("딱한잔")
                         .font(.largeTitle)
                         .bold()
                         .padding(.bottom, 10)
