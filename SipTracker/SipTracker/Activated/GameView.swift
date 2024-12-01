@@ -9,22 +9,59 @@ import SwiftUI
 import SwiftUIIntrospect
 
 struct GameView: View {
-    @State private var gameRoundIndex: Int = .zero
+    @EnvironmentObject private var appState: AppStateManager
+    @StateObject private var viewModel: GameViewModel = GameViewModel()
     
     var body: some View {
-        TabView(selection: $gameRoundIndex) {
-            MultiplicationGame()
-                .tag(0)
+        ZStack {
+            TabView(selection: $viewModel.currentRound) {
+                MultiplicationGame(viewModel: viewModel)
+                    .tag(0)
+                
+                FindingGame()
+                    .tag(1)
+                
+                TypingGame()
+                    .tag(2)
+            }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .introspect(.tabView(style: .page), on: .iOS(.v17, .v18)) {
+                $0.isScrollEnabled = false
+            }
             
-            FindingGame()
-                .tag(1)
+            VStack {
+                
+                header
+                
+                Spacer()
+            }
+        }
+    }
+}
+
+#Preview {
+    GameView()
+}
+
+extension GameView {
+    var header: some View {
+        HStack {
+            Button {
+                appState.pop()
+            } label: {
+                Image(systemName: "xmark")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .foregroundStyle(.black)
+            }
             
-            TypingGame()
-                .tag(2)
+            Spacer()
+            
+            Text("\(viewModel.currentRound + 1) / \(viewModel.totalRound)")
+                .bold()
+                .font(.system(size: 18))
         }
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        .introspect(.tabView(style: .page), on: .iOS(.v17, .v18)) {
-            $0.isScrollEnabled = false
-        }
+        .frame(height: 42)
+        .padding(.horizontal, 20)
     }
 }

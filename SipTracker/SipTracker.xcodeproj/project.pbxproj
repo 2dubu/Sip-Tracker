@@ -24,11 +24,13 @@
 		C6516F772CFC3BBF00FCFAF2 /* UserSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F762CFC3BBF00FCFAF2 /* UserSetupView.swift */; };
 		C6516F7B2CFC53C600FCFAF2 /* MyCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F7A2CFC53C600FCFAF2 /* MyCalendar.swift */; };
 		C6516F7D2CFC5A5700FCFAF2 /* SelectedDateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6516F7C2CFC5A5700FCFAF2 /* SelectedDateEventView.swift */; };
+		C6DDF3F42CFC821100421325 /* KeyboardHideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DDF3F32CFC821000421325 /* KeyboardHideable.swift */; };
 		C6F07EA02CFC65ED00F44F30 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F07E9F2CFC65EA00F44F30 /* GameView.swift */; };
 		C6F07EA22CFC67A100F44F30 /* MultiplicationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F07EA12CFC678A00F44F30 /* MultiplicationGame.swift */; };
 		C6F07EA42CFC67B800F44F30 /* FindingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F07EA32CFC67A500F44F30 /* FindingGame.swift */; };
 		C6F07EA62CFC67C900F44F30 /* TypingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F07EA52CFC67BB00F44F30 /* TypingGame.swift */; };
 		C6F07EA92CFC69E300F44F30 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = C6F07EA82CFC69E300F44F30 /* SwiftUIIntrospect */; };
+		C6F07EAB2CFC6C6800F44F30 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F07EAA2CFC6C6400F44F30 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,10 +51,12 @@
 		C6516F7A2CFC53C600FCFAF2 /* MyCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendar.swift; sourceTree = "<group>"; };
 		C6516F7C2CFC5A5700FCFAF2 /* SelectedDateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedDateEventView.swift; sourceTree = "<group>"; };
 		C6C4C10B2CDD056E00C80E6E /* SipTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SipTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6DDF3F32CFC821000421325 /* KeyboardHideable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHideable.swift; sourceTree = "<group>"; };
 		C6F07E9F2CFC65EA00F44F30 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		C6F07EA12CFC678A00F44F30 /* MultiplicationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationGame.swift; sourceTree = "<group>"; };
 		C6F07EA32CFC67A500F44F30 /* FindingGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindingGame.swift; sourceTree = "<group>"; };
 		C6F07EA52CFC67BB00F44F30 /* TypingGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingGame.swift; sourceTree = "<group>"; };
+		C6F07EAA2CFC6C6400F44F30 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				C6F07E9F2CFC65EA00F44F30 /* GameView.swift */,
+				C6F07EAA2CFC6C6400F44F30 /* GameViewModel.swift */,
 				C6F07EA12CFC678A00F44F30 /* MultiplicationGame.swift */,
 				C6F07EA32CFC67A500F44F30 /* FindingGame.swift */,
 				C6F07EA52CFC67BB00F44F30 /* TypingGame.swift */,
@@ -139,6 +144,7 @@
 				C6516F462CF5981D00FCFAF2 /* Constant.swift */,
 				C6516F702CFC3A8600FCFAF2 /* AppStateManager.swift */,
 				C6516F512CF5A02E00FCFAF2 /* TimerManager.swift */,
+				C6DDF3F32CFC821000421325 /* KeyboardHideable.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 				C6F07EA62CFC67C900F44F30 /* TypingGame.swift in Sources */,
 				C6516F522CF5A02E00FCFAF2 /* TimerManager.swift in Sources */,
 				C6516F472CF5982200FCFAF2 /* Constant.swift in Sources */,
+				C6DDF3F42CFC821100421325 /* KeyboardHideable.swift in Sources */,
 				C6516F3E2CF5978D00FCFAF2 /* ActivatedView.swift in Sources */,
 				C6F07EA02CFC65ED00F44F30 /* GameView.swift in Sources */,
 				C6516F3F2CF5978D00FCFAF2 /* ContentView.swift in Sources */,
@@ -253,6 +260,7 @@
 				C6516F432CF5978D00FCFAF2 /* SipTrackerApp.swift in Sources */,
 				C6F07EA22CFC67A100F44F30 /* MultiplicationGame.swift in Sources */,
 				C6516F4E2CF59E7600FCFAF2 /* DrinkRecord.swift in Sources */,
+				C6F07EAB2CFC6C6800F44F30 /* GameViewModel.swift in Sources */,
 				C6516F772CFC3BBF00FCFAF2 /* UserSetupView.swift in Sources */,
 				C6516F712CFC3A8900FCFAF2 /* AppStateManager.swift in Sources */,
 				C6516F732CFC3B6900FCFAF2 /* User.swift in Sources */,
